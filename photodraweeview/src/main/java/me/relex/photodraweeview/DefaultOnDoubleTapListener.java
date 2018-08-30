@@ -57,9 +57,10 @@ public class DefaultOnDoubleTapListener implements GestureDetector.OnDoubleTapLi
             float y = event.getY();
 
             // min, mid, max
-            if (scale < mAttacher.getMediumScale()) {
-                mAttacher.setScale(mAttacher.getMediumScale(), x, y, true);
-            } else if (scale >= mAttacher.getMediumScale() && scale < mAttacher.getMaximumScale()) {
+//            if (scale < mAttacher.getMediumScale()) {
+//                mAttacher.setScale(mAttacher.getMediumScale(), x, y, true);
+//            } else
+            if (scale <= mAttacher.getMediumScale()) {
                 mAttacher.setScale(mAttacher.getMaximumScale(), x, y, true);
             } else {
                 mAttacher.setScale(mAttacher.getMinimumScale(), x, y, true);
